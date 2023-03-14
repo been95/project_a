@@ -1,0 +1,38 @@
+.contacts {
+  height: 100vh;
+  margin: 0 auto;
+  h3 {
+    font-size: 64px;
+    margin-bottom: 34px;
+  }
+  .entry {
+    input {
+      width: 630px;
+      height: 48px;
+      box-sizing: border-box;
+      border: 1px solid #e1e1e1;
+      border-radius: 30px;
+    }
+  }
+  .title {
+    padding: 33px 0 33px 0;
+    input {
+      width: 630px;
+      height: 244px;
+      box-sizing: border-box;
+      border: 1px solid #e1e1e1;
+      border-radius: 30px;
+    }
+  }
+  button {
+    width: 255px;
+    height: 52px;
+    background: #c71919;
+    border-radius: 30px;
+    border: 1px solid #e1e1e1;
+    span {
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}
