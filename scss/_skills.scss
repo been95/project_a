@@ -1,0 +1,38 @@
+.skills {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .inner {
+    width: 100%;
+    max-width: 1220px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+
+    img {
+      width: 50px;
+    }
+
+    progress {
+      flex-grow: 1;
+    }
+
+    progress::-webkit-progress-bar {
+      background: red;
+    }
+    progress::-webkit-progress-value {
+      background: yellow;
+    }
+  }
+}

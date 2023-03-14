@@ -1,0 +1,44 @@
+.header_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  transition: background-color 0.4s;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 1440px;
+    height: 70px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  h1 {
+    background-image: url($url + "logo.png");
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    width: 55px;
+    height: 35px;
+    span {
+      @include blind;
+    }
+  }
+  ul {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &.fixed {
+    position: fixed;
+    background: #313131;
+  }
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+$url: "../img/";
+
+@import "reset", "mixin";
+
+body {
+  font-size: 14px;
+}
+
+@import "header", "home", "profile", "gallery", "skills", "contact", "footer";
