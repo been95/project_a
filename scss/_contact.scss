@@ -1,13 +1,18 @@
 .contacts {
   height: 100vh;
-  margin: 0 auto;
+  text-align:center;
   h3 {
     font-size: 64px;
     margin-bottom: 34px;
   }
+  
+  .inner {
+    margin: 0 auto;  
+    width:630px;
+  }
   .entry {
     input {
-      width: 630px;
+      width: 100%;
       height: 48px;
       box-sizing: border-box;
       border: 1px solid #e1e1e1;
@@ -17,7 +22,7 @@
   .title {
     padding: 33px 0 33px 0;
     input {
-      width: 630px;
+      width: 100%;
       height: 244px;
       box-sizing: border-box;
       border: 1px solid #e1e1e1;
