@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img { height:300px;}
+    </style>
+</head>
+<body>
+    <img src="./img/g1.jpg" alt="gallery1" class="img">
+    <button type="button">Change image</button>
+
+    <div class="thumbs"></div>
+    <img src="./img/g2.jpg" alt="gallery2" class="img2">
+    <img src="./img/g3.jpg" alt="gallery3" class="img3">
+
+    <script>
+        const img = document.querySelector('.img');
+        const btn = document.querySelector('button');
+        const img2 = document.querySelector('.img2');
+        const img3 = document.querySelector('.img3');
+
+        img2.addEventListener('click', (e) => {
+            let path = e.currentTarget.getAttribute('src');
+            img.setAttribute('src',path);
+        })
+        img3.addEventListener('click', (e) => {
+            let path = e.currentTarget.getAttribute('src');
+            img.setAttribute('src',path);
+        })
+
+        btn.addEventListener('click', (e) => {
+            img.setAttribute('src','./img/g2.jpg');
+        });
+
+
+    </script>
+</body>
+</html>
