@@ -1,12 +1,17 @@
-const img = document.querySelector("img");
-const img2 = document.querySelector(".img2");
-const img3 = document.querySelector(".img3");
-img2.addEventListener("click", (e) => {
+const img = document.querySelector(".img");
+const profile1 = document.querySelector(".profile1");
+const profile2 = document.querySelector(".profile2");
+const profile3 = document.querySelector(".profile3");
+
+profile1.addEventListener("click", (e) => {
   let path = e.currentTarget.getAttribute("src");
   img.setAttribute("src", path);
-  console.log(e);
 });
-img3.addEventListener("click", (e) => {
+profile2.addEventListener("click", (e) => {
+  let path = e.currentTarget.getAttribute("src");
+  img.setAttribute("src", path);
+});
+profile3.addEventListener("click", (e) => {
   let path = e.currentTarget.getAttribute("src");
   img.setAttribute("src", path);
 });
