@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 
   .inner {
     width: 100%;
@@ -34,6 +35,11 @@
     display: grid;
     grid-template-columns: 60px auto;
     column-gap: 20px;
+    margin-bottom: 31px;
+    margin-top: 82px;
+    flex-direction: row;
+    line-height: 16px;
+    font-weight: 400;
   }
 
   ul {
