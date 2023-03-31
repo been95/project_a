@@ -26,11 +26,11 @@
       height: 620px;
     }
   }
-.info{
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-}
+  .info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
   h3 {
     font-size: 66px;
   }
@@ -46,8 +46,6 @@ flex-direction: column;
     justify-content: space-between;
     align-items: center;
     column-gap: 18px;
-    li {
-    }
     li a img {
       width: 231px;
       height: 188px;
