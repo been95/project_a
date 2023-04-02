@@ -42,6 +42,7 @@
       font-weight: bold;
       padding-left: 20px;
       padding-top: 50px;
+      box-sizing: border-box;
       dt {
         margin-bottom: 2px;
         font-size: 22px;
@@ -64,4 +65,43 @@
       }
     }
   }
+}
+
+.modal-container{
+  background-color: #222;
+  padding: 22px;
+  position: fixed;
+  width: 576px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  .btn-close{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #C71919;
+    color: #fff;
+    position: absolute;
+    right:  -54px;
+    top: 25px;
+    text-align: center;
+    line-height: 34px;
+
+    .material-symbols-outlined {
+      line-height: inherit;
+    }
+  }
+}
+.dim{
+  position: fixed;
+  /*
+  width: 100vw;
+  height: 100vh;
+  */
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
