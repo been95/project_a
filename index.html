@@ -90,7 +90,7 @@
     </section>
     <section class="gallery">
       <h2 class="blind">Portfolio Gallery</h2>
-      <ul>
+      <ul class="list">
         <li>
           <a href="#" class="thumbnail">
             <dl>
@@ -229,12 +229,11 @@
           </dl>
           <p>따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이</p>
         </div>
-        <div class="modal-cotents-img">
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+        <figure class="modal-cotents-img">
+          <figcaption class="blind">more images</figcaption>
+         <img src="./img/g1.jpg" alt="img" class="photo1">
+         <img src="./img/g1.jpg" alt="img" class="photo2">
+        </figure>
         <button type="button" class="btn-close">
           <span class="material-symbols-outlined"> close </span>
           <spam class="blind">창닫기</spam>
@@ -279,13 +278,13 @@
       </div>
     </section>
     <section class="contacts">
-      <h3>Contacts</h3>
       <div class="inner">
+        <h3>Contacts</h3>
         <div class="entry">
-          <input type="text" name="이름" placeholder="제목입력" />
+          <input type="text" placeholder="제목입력" />
         </div>
         <div class="title">
-          <input type="text" name="제목" placeholder="내용을 입력하시오" />
+          <textarea  placeholder="내용을 입력하시오" ></textarea>
         </div>
         <button type="button"><span>SEND MESSAGE</span></button>
       </div>
