@@ -21,15 +21,18 @@ profile3.addEventListener("click", (e) => {
 
 const big = document.querySelector(".bigimgaes");
 const thumbs = document.querySelectorAll(".thumbs");
-
+const modalcontainer = document.querySelector(".modal-container");
+const dim = document.querySelector(".dim");
+const thumbnail = document.querySelector(".thumbnail");
+const closeBtn = document.querySelector(".btn-close");
 console.log(thumbs);
 
-thumbs.forEach( (e,i) => {
-  e.addEventListener('click', (event) => {
-    big.setAttribute('src','./img/img' + (i+1) + '.png');
-  })
-})
-console.log('hello');
+thumbs.forEach((e, i) => {
+  e.addEventListener("click", (event) => {
+    big.setAttribute("src", "./img/img" + (i + 1) + ".png");
+  });
+});
+console.log("hello");
 
 /*
 thumbs.forEach( (e, i, arrys) => {
@@ -37,9 +40,34 @@ thumbs.forEach( (e, i, arrys) => {
   big.setAttribute('src','./img/img' + (i+1) + '.png');
 })
 */
- 
-console.log('world')
- 
+modalcontainer.addEventListener("click", (e) => {
+  if (modalcontainer.classList.contains("active")) {
+    modalcontainer.classList.remove("active");
+  } else {
+    modalcontainer.classList.add("active");
+  }
+});
+
+thumbnail.addEventListener("click", (e) => {
+  modalcontainer.style.right = 0;
+  closeBtn.style.display = "flex";
+  dim.style.display = "block";
+});
+
+closeBtn.addEventListener("click", (e) => {
+  modalcontainer.style.right = "-75%";
+  closeBtn.style.display = "none";
+  dim.style.display = "none";
+});
+
+dim.addEventListener("click", (e) => {
+  modalcontainer.style.right = "-90%";
+  dim.style.display = "none";
+  closeBtn.style.display = "none";
+});
+
+console.log("world");
+
 /*
 for (let i = 0; i < thumbs.length; i++) {
   thumbs[i].addEventListener("click", (e) => {
@@ -47,7 +75,6 @@ for (let i = 0; i < thumbs.length; i++) {
   });
 }
 */
- 
 
 /*
 let path = './img/';
@@ -65,5 +92,3 @@ thumbs[2].addEventListener("click", (e) => {
 });
 
 */
-
-  
