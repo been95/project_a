@@ -27,42 +27,138 @@ const thumbnail = document.querySelectorAll(".thumbnail");
 const closeBtn = document.querySelector(".btn-close");
 const datas = [
   {
-    id : 0,
-    img : "./img/g1.jpg",
-    alt : "베이킹 히포",
-    title : "폴라로이드",
-    date : "2022.03.04",
-    type : "디지털드로잉",
-    tool : "아이패드 프로크리에이트",
-    memo : "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
-    photo1 : "./img/g1.jpg",
-    photo2 : "./img/g2.jpg",
+    id: 0,
+    img: "./img/g1.jpg",
+    alt: "히포와 베이킹",
+    title: "요리",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
+    photo1: "./img/g2.jpg",
+    photo2: "./img/g3.jpg",
   },
   {
-    id : 1,
-    img : "./img/g2.jpg",
-    alt : "베이킹 히포",
-    title : "폴라로이드",
-    date : "2022.03.04",
-    type : "디지털드로잉",
-    tool : "아이패드 프로크리에이트",
-    memo : "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
-    photo1 : "./img/g1.jpg",
-    photo2 : "./img/g2.jpg",
+    id: 1,
+    img: "./img/g2.jpg",
+    alt: "딩굴딩굴",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
   },
   {
-    id : 2,
-    img : "./img/g3.jpg",
-    alt : "베이킹 히포",
-    title : "폴라로이드",
-    date : "2022.03.04",
-    type : "디지털드로잉",
-    tool : "아이패드 프로크리에이트",
-    memo : "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
-    photo1 : "./img/g1.jpg",
-    photo2 : "./img/g2.jpg",
-  }
-]
+    id: 2,
+    img: "./img/g3.jpg",
+    alt: "노을",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 3,
+    img: "./img/g3.jpg",
+    alt: "시험기간",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 4,
+    img: "./img/g3.jpg",
+    alt: "공부",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 5,
+    img: "./img/g3.jpg",
+    alt: "이상한나라의 앨리스",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 6,
+    img: "./img/g3.jpg",
+    alt: "가마쿠라",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 7,
+    img: "./img/g3.jpg",
+    alt: "히포집앞",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 8,
+    img: "./img/g3.jpg",
+    alt: "그림그리기",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 2,
+    img: "./img/g3.jpg",
+    alt: "폭죽",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+  {
+    id: 2,
+    img: "./img/g3.jpg",
+    alt: "꿈",
+    title: "폴라로이드",
+    date: "2022.03.04",
+    type: "디지털드로잉",
+    tool: "아이패드 프로크리에이트",
+    memo: "따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이",
+    photo1: "./img/g1.jpg",
+    photo2: "./img/g2.jpg",
+  },
+];
 
 thumbs.forEach((e, i) => {
   e.addEventListener("click", (event) => {
@@ -78,7 +174,6 @@ thumbs.forEach( (e, i, arrys) => {
 })
 */
 
-
 modalcontainer.addEventListener("click", (e) => {
   if (modalcontainer.classList.contains("active")) {
     modalcontainer.classList.remove("active");
@@ -87,12 +182,12 @@ modalcontainer.addEventListener("click", (e) => {
   }
 });
 
-thumbnail.forEach((e,i)=>{
-e.addEventListener("click",(event)=>{
-  event.preventDefault(0); 
-   modalcontainer.style.left= 0;
-   closeBtn.style.display = "block";
-   dim.style.display = "block";
+thumbnail.forEach((e, i) => {
+  e.addEventListener("click", (event) => {
+    event.preventDefault(0);
+    modalcontainer.style.left = 0;
+    closeBtn.style.display = "block";
+    dim.style.display = "block";
   });
 });
 
