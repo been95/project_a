@@ -27,6 +27,9 @@ const thumbnail = document.querySelectorAll(".thumbnail");
 const closeBtn = document.querySelector(".btn-close");
 const containertitle = document.querySelector(".container-title");
 const containerdate = document.querySelector(".container-date");
+const meno = document.querySelector(".meno")
+const photo1 =document.querySelector(".photo1")
+const photo2 =document.querySelector(".photo2")
 const datas = [
   {
     id: 0,
@@ -240,6 +243,10 @@ thumbnail.forEach((e, i) => {
     dim.style.display = "block";
     containertitle.textContent = datas[i].title;
     containerdate.textContent = datas[i].date;
+    meno.textContent= datas[i].memo;
+    thumbs.innerHTML=datas[i].img
+    photo1.innerHTML= datas[i].photo1;
+
   });
 });
 
