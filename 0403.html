@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Friends</h1>
-    Name : <h2>Name</h2>
-    Age: <p>Age</p>
+    Name :
+    <h2>Name</h2>
+    Age:
+    <p>Age</p>
     Introduce : <span>Introduce</span>
     <button type="button" class="btn">Park</button>
     <button type="button" class="btn">Jason</button>
     <button type="button" class="btn">Scott</button>
 
     <script>
-        const friends = [ 
-            {
-                name : 'Park seo jun',
-                age : 38,
-                info : 'Hello world, Actor'
-            },
-            {
-                name : 'Jason Lee',
-                age : 22,
-                info : 'Designer'
-            },
-            {
-                name : 'Scott team',
-                age : 24,
-                info : 'Developer'
-            },
-           ]
-        const btns = document.querySelectorAll('.btn');
-        const h2 =document.querySelector('h2')
-        const age = document.querySelector('p');
-        const info= document.querySelector('span')
-        btns.forEach( (e,idx) => {
-            e.addEventListener('click', (event) => {
-                h2.textContent=friends[idx].name
-                age.textContent=friends[idx].age
-                info.textContent=friends[idx].info
-
-            })
+      const friends = [
+        {
+          name: "Park seo jun",
+          age: 38,
+          info: "Hello world, Actor",
+        },
+        {
+          name: "Jason Lee",
+          age: 22,
+          info: "Designer",
+        },
+        {
+          name: "Scott team",
+          age: 24,
+          info: "Developer",
+        },
+      ];
+      const btns = document.querySelectorAll(".btn");
+      const h2 = document.querySelector("h2");
+      const age = document.querySelector("p");
+      const info = document.querySelector("span");
+      btns.forEach((e, idx) => {
+        e.addEventListener("click", (event) => {
+          h2.textContent = friends[idx].name;
+          age.textContent = friends[idx].age;
+          info.textContent = friends[idx].info;
         });
+      });
     </script>
-</body>
+  </body>
 </html>
