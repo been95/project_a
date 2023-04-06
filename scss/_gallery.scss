@@ -5,66 +5,66 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
-  
-  li {
-    position: relative;
-    height: calc(100vh / 3);
 
-    @for $i from 1 through 15 {
-      &:nth-child(#{$i}) {
-        background: url($url + "g#{$i}.jpg ") no-repeat center center/cover;
+    li {
+      position: relative;
+      height: calc(100vh / 3);
+
+      @for $i from 1 through 15 {
+        &:nth-child(#{$i}) {
+          background: url($url + "g#{$i}.jpg ") no-repeat center center/cover;
+        }
       }
-    }
 
-    &:nth-child(1) {
-      background: url($url + "g1.jpg") no-repeat center center/cover;
-    }
-
-    .thumbnail {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0);
-      font-size: 15px;
-      transition: opacity 0.2s;
-    }
-    dl {
-      opacity: 0;
-      position: absolute;
-      left: 0px;
-      bottom: 10px;
-      width: 100%;
-      color: #fff;
-      transition: 0.4s 0.1s;
-      font-weight: bold;
-      padding-left: 20px;
-      padding-top: 50px;
-      box-sizing: border-box;
-      dt {
-        margin-bottom: 2px;
-        font-size: 22px;
+      &:nth-child(1) {
+        background: url($url + "g1.jpg") no-repeat center center/cover;
       }
-      dd {
-        width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0;
-      }
-    }
 
-    &:hover {
       .thumbnail {
-        background-color: rgba(0, 0, 0, 0.5);
-        dl {
-          opacity: 1;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 15px;
+        transition: opacity 0.2s;
+      }
+      dl {
+        opacity: 0;
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+        width: 100%;
+        color: #fff;
+        transition: 0.4s 0.1s;
+        font-weight: bold;
+        padding-left: 20px;
+        padding-top: 50px;
+        box-sizing: border-box;
+        dt {
+          margin-bottom: 2px;
+          font-size: 22px;
+        }
+        dd {
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          margin: 0;
+        }
+      }
+
+      &:hover {
+        .thumbnail {
+          background-color: rgba(0, 0, 0, 0.5);
+          dl {
+            opacity: 1;
+          }
         }
       }
     }
-  }
   }
 }
 
@@ -100,7 +100,8 @@
     p {
       padding-top: 50px;
       color: #fff;
-      font-size: 12px;
+      font-size: 14px;
+      padding-bottom: 22px;
     }
   }
 
@@ -122,15 +123,16 @@
     }
   }
 }
-.modal-cotents-img{
+.modal-cotents-img {
   display: flex;
   justify-content: space-between;
   align-items: center;
- width: 218px;
+  column-gap: 15px;
+  width: 218px;
 }
 .dim {
   position: fixed;
-  display:none ;
+  display: none;
   /*
   width: 100vw;
   height: 100vh;
@@ -141,4 +143,3 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-

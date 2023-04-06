@@ -27,9 +27,10 @@ const thumbnail = document.querySelectorAll(".thumbnail");
 const closeBtn = document.querySelector(".btn-close");
 const containertitle = document.querySelector(".container-title");
 const containerdate = document.querySelector(".container-date");
-const meno = document.querySelector(".meno")
-const photo1 =document.querySelector(".photo1")
-const photo2 =document.querySelector(".photo2")
+const meno = document.querySelector(".meno");
+const photo1 = document.querySelector(".photo1");
+const photo2 = document.querySelector(".photo2");
+const work = document.querySelector(".work");
 const datas = [
   {
     id: 0,
@@ -189,7 +190,7 @@ const datas = [
   },
   {
     id: 13,
-    img: "./img/g14.jpg",
+    img: "../img/g14.jpg",
     alt: "전철안",
     title: "전철안",
     date: "2022.09.07",
@@ -243,10 +244,24 @@ thumbnail.forEach((e, i) => {
     dim.style.display = "block";
     containertitle.textContent = datas[i].title;
     containerdate.textContent = datas[i].date;
-    meno.textContent= datas[i].memo;
-    thumbs.innerHTML=datas[i].img
-    photo1.innerHTML= datas[i].photo1;
-
+    meno.textContent = datas[i].memo;
+    work.setAttribute("src", datas[i].img);
+    photo1.setAttribute("src", datas[i].photo1);
+    photo2.setAttribute("src", datas[i].photo2);
+  });
+});
+photo1.forEach((e, i) => {
+  e.addEventListener("click", (event) => {
+    event.preventDefault(0);
+    modalcontainer.style.left = 0;
+    closeBtn.style.display = "block";
+    dim.style.display = "block";
+    containertitle.textContent = datas[i].title;
+    containerdate.textContent = datas[i].date;
+    meno.textContent = datas[i].memo;
+    work.setAttribute("src", datas[i].img);
+    photo1.setAttribute("src", datas[i].photo1);
+    photo2.setAttribute("src", datas[i].photo2);
   });
 });
 
