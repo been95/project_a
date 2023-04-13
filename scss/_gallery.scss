@@ -82,6 +82,10 @@
     .thumbs {
       padding-bottom: 15px;
     }
+    .contact-box{ 
+       @include flex;
+       max-width: 400px;
+    }
     h3 {
       font-size: 30px;
       color: #fff;
@@ -118,28 +122,28 @@
     line-height: 34px;
     display: none;
 
+    @include center(34px, #c71919);
+
     .material-symbols-outlined {
       line-height: inherit;
     }
   }
 }
 .modal-cotents-img {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   
+  @include flex($a:center);
   column-gap: 15px;
-  width: 218px;
+  width:50px;
 }
 .dim {
-  position: fixed;
+  
   display: none;
   /*
   width: 100vw;
   height: 100vh;
   */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+   @include full;
 }
+ 
+
+

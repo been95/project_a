@@ -7,9 +7,7 @@
   background-color: transparent;
   transition: background-color 0.4s;
   .inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($a:center);
     padding: 0 40px;
     width: 100%;
     max-width: 1440px;
@@ -21,8 +19,7 @@
   h1 {
     background-image: url($url + "logo.png");
     background-repeat: no-repeat;
-    align-items: center;
-    display: flex;
+    @include flex(null,center);
     width: 55px;
     height: 35px;
     span {
@@ -31,9 +28,8 @@
   }
   ul {
     font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    @include flex($a:center);
     column-gap: 30px;
   }
 

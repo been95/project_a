@@ -1,8 +1,6 @@
 .Profile {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($j:center, $a:center);
   font-family: "Roboto", sans-serif;
   line-height: 1.38;
 
@@ -28,8 +26,7 @@
     }
   }
   .info {
-    display: flex;
-    justify-content: space-between;
+    @include flex;
     flex-direction: column;
   }
   h3 {
@@ -43,9 +40,8 @@
   }
 
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ 
+    @include flex($a:center);
     column-gap: 18px;
     li a img {
       width: 231px;

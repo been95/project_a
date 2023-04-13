@@ -1,8 +1,8 @@
 .skills {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+
+  @include flex(center, center);
   .inner {
     width: 100%;
     max-width: 1220px;
@@ -18,9 +18,11 @@
   }
 
   li {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
+    */
+    @include flex($a:center);
     column-gap: 40px;
 
     img {
