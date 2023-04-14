@@ -30,7 +30,7 @@ const containerdate = document.querySelector(".container-date");
 const meno = document.querySelector(".meno");
 const photo1 = document.querySelector(".photo1");
 const photo2 = document.querySelector(".photo2");
-const photo3 = document.querySelector(".photo3")
+const photo3 = document.querySelector(".photo3");
 const work = document.querySelector(".work");
 const datas = [
   {
@@ -251,7 +251,12 @@ thumbnail.forEach((e, i) => {
     photo2.setAttribute("src", datas[i].photo2);
   });
 });
-
+const test = document.querySelector(".photo1");
+e.addEventListener("click", (event) => {
+  test.setAttribute(dataset.title);
+});
+console.log(test);
+console.log(test.dataset.title, test.dataset.created);
 
 closeBtn.addEventListener("click", (e) => {
   modalcontainer.style.left = "-600px";
@@ -291,8 +296,3 @@ thumbs[2].addEventListener("click", (e) => {
 });
 
 */
-
-
-const test = document.querySelector('.photo1');
-console.log(test);
-console.log(test.dataset.title, test.dataset.created);
