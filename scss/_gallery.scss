@@ -82,9 +82,9 @@
     .thumbs {
       padding-bottom: 15px;
     }
-    .contact-box{ 
-       @include flex;
-       max-width: 400px;
+    .contact-box {
+      @include flex;
+      max-width: 400px;
     }
     h3 {
       font-size: 30px;
@@ -130,20 +130,15 @@
   }
 }
 .modal-cotents-img {
-   
-  @include flex($a:center);
+  @include flex($a: center);
   column-gap: 15px;
-  width:50px;
+  width: 50px;
 }
 .dim {
-  
   display: none;
   /*
   width: 100vw;
   height: 100vh;
   */
-   @include full;
+  @include full;
 }
- 
-
-

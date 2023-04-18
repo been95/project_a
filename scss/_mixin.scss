@@ -7,18 +7,22 @@
   overflow: hidden;
 }
 
-@mixin flex($j:space-between,$a:null) {
-  display:flex;
-  justify-content:$j;
-  align-items:$a;
+@mixin flex($j: space-between, $a: null) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
 }
 
-@mixin full($p:fixed,$c:#000,$a:0.5) {
-  position:$p;
-  background-color:rgba($c, $a);
-  top:0;left:0;right:0;bottom:0;
+@mixin full($p: fixed, $c: #000, $a: 0.5) {
+  position: $p;
+  background-color: rgba($c, $a);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-@mixin center($size, $color) {
-  // homework
+@mixin center($size, $color: rgba(0, 0, 0, 0.5)) {
+  border-radius: 50%;
+  background-color: rgba($color);
 }
