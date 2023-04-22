@@ -34,7 +34,7 @@ const photo2 = modalcontainer.querySelector(".photo2");
 const work = modalcontainer.querySelector(".work");
 const smallThumbs = modalcontainer.querySelectorAll('.modal-cotents-img img');
 console.log('small thumbs : ', smallThumbs);
-
+console.log('last commit')
  
 const datas = [
   {
