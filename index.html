@@ -292,20 +292,17 @@
         <div class="title">
           <textarea placeholder="내용을 입력하시오"></textarea>
         </div>
-        <button type="button"><span>SEND MESSAGE</span></button>
+        <button type="button" clsaa="btn-send"><span>SEND MESSAGE</span></button>
+        <div id="result">
+          <h1>제목입니다.</h1>
+          <p>내용입니다.</p>
+      </div>
       </div>
     </section>
     <footer></footer>
     <script src="./js/main.js"></script>
     <script>
-      const header = document.querySelector(".header_wrap");
-      header.addEventListener("scroll", (e) => {
-        if (window.pageYOffset > 50) {
-          herder.classList.add("fixed");
-        } else {
-          herder.classList.remove("fixed");
-        }
-      });
+    
     </script>
   </body>
 </html>
