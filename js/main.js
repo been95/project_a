@@ -280,20 +280,16 @@ const sendContact = () => {
   }
 
   const title = contactsWrap.querySelector('.entry input');
-  const btnsend = contactsWrap.querySelector('.btn-send');
+  const button = contactsWrap.querySelector('.btn-send');
   const content = contactsWrap.querySelector('.title teatarea');
+  
   
   const result = document.getElementById('result');
   const h1 = result.querySelector('h1');
   const p = result.querySelector('p'); 
 
-  btnsend.addEventListener('click', () => {
-    console.log(btnsend)
-    h1.textContent = title.value;
-    p.textContent = content.value;
-    contactsWrap.style.display ='none';
-    result.style.display = 'block';
-
+  button.addEventListener('click', (e) => {
+ console.log('button')
   });
 }
 
