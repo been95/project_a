@@ -19,7 +19,7 @@
         <nav class="gnb">
           <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">PROFILE</a></li  >
+            <li><a href="#">PROFILE</a></li>
             <li><a href="#">GALLERY</a></li>
             <li><a href="#">SKILLS</a></li>
             <li><a href="#">CONTACT</a></li>
@@ -237,9 +237,9 @@
             <dt>디지털 드로잉</dt>
             <dd>아이패드 프로크리에이트</dd>
           </dl>
-          <p class="meno"> 따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이</p>
+          <p class="meno">따사로운 햇살과 친구들과 함께 공원에서 놀고 있는 히포와 츄덕이</p>
         </div>
-      
+
         <button type="button" class="btn-close">
           <span class="material-symbols-outlined"> close </span>
           <spam class="blind">창닫기</spam>
@@ -253,50 +253,53 @@
           <li>
             <img src="./img/skills_html.png" alt="html" />
             <label for="skill_html" class="blind">HTML 숙련도</label>
-            <progress id="skill_html" value="32" max="100">32%</progress>
-            <strong>95%</strong>
+            <progress class="pro_bar" id="skill_html" value="0" max="100">75</progress>
+            <strong>0</strong>
           </li>
           <li>
             <img src="./img/skills_css.png" alt="html" />
             <label for="skill_html" class="blind">HTML 숙련도</label>
-            <progress id="skill_html" value="80" max="100">32%</progress>
-            <strong>95%</strong>
+            <progress class="pro_bar" id="skill_html" value="0" max="100">100</progress>
+            <strong>0</strong>
           </li>
           <li>
             <img src="./img/skills_sass.png" alt="html" />
             <label for="skill_html" class="blind">HTML 숙련도</label>
-            <progress id="skill_html" value="26" max="100">32%</progress>
-            <strong>95%</strong>
+            <progress class="pro_bar" id="skill_html" value="0" max="100">98</progress>
+            <strong>0</strong>
           </li>
           <li>
             <img src="./img/skills_js.png" alt="html" />
             <label for="skill_html" class="blind">HTML 숙련도</label>
-            <progress id="skill_html" value="79" max="100">32%</progress>
-            <strong>95%</strong>
+            <progress class="pro_bar" id="skill_html" value="0" max="100">95</progress>
+            <strong>0</strong>
           </li>
           <li>
             <img src="./img/skills_jquery.png" alt="html" />
             <label for="skill_html" class="blind">HTML 숙련도</label>
-            <progress id="skill_html" value="90" max="100">32%</progress>
-            <strong>95%</strong>
+            <progress class="pro_bar" id="skill_html" value="0" max="100">87</progress>
+            <strong>0</strong>
           </li>
         </ul>
       </div>
     </section>
     <section class="contacts">
       <div class="inner">
-        <h3>Contacts</h3>
-        <div class="entry">
-          <input type="text" placeholder="제목입력" />
+        <div class="contacts-img"><img src="./img/contacts.png" /></div>
+        <div class="contacts-inner">
+          <h3>Contacts</h3>
+          <div class="contact-container">
+            <input type="text" class="title" placeholder="제목입력" />
+            <textarea class="contents" placeholder="내용을 입력하시오"></textarea>
+
+            <button type="button" class="btn-send"><span>SEND MESSAGE</span></button>
+          </div>
+
+          <div class="contact-result">
+            <h1>제목</h1>
+            <p>내용</p>
+          </div>
         </div>
-        <div class="title">
-          <textarea placeholder="내용을 입력하시오"></textarea>
-        </div>
-        <button type="button" clsaa="btn-send"><span>SEND MESSAGE</span></button>
-        <div id="result">
-          <h1>제목입니다.</h1>
-          <p>내용입니다.</p>
-      </div>
       </div>
     </section>
     <footer></footer>

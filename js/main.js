@@ -1,8 +1,8 @@
 const profileGallery = () => {
-  const profile = document.querySelector('.Profile');
+  const profile = document.querySelector(".Profile");
 
-  if( !profile ) {
-     return false;
+  if (!profile) {
+    return false;
   }
   const img = profile.querySelector(".img");
   const big = profile.querySelector(".bigimgaes");
@@ -12,15 +12,13 @@ const profileGallery = () => {
     e.addEventListener("click", (event) => {
       big.setAttribute("src", "./img/img" + (i + 1) + ".png");
     });
-  }); 
-}
+  });
+};
 
-
-
-const galleryPopup = () => { 
+const galleryPopup = () => {
   const modalcontainer = document.querySelector(".modal-container");
 
-  if(!modalcontainer) {
+  if (!modalcontainer) {
     return false;
   }
 
@@ -34,9 +32,8 @@ const galleryPopup = () => {
   const photo1 = modalcontainer.querySelector(".photo1");
   const photo2 = modalcontainer.querySelector(".photo2");
   const work = modalcontainer.querySelector(".work");
-  const smallThumbs = modalcontainer.querySelectorAll('.modal-cotents-img img');
-   
-   
+  const smallThumbs = modalcontainer.querySelectorAll(".modal-cotents-img img");
+
   const datas = [
     {
       id: 0,
@@ -48,7 +45,6 @@ const galleryPopup = () => {
       memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
       photo1: "./img/g2.jpg",
       photo2: "./img/g3.jpg",
-  
     },
     {
       id: 1,
@@ -96,7 +92,7 @@ const galleryPopup = () => {
     },
     {
       id: 5,
-      img: "./img/g6.jpg", 
+      img: "./img/g6.jpg",
       title: "이상한나라의 앨리스",
       date: "2022.11.23",
       type: "디지털드로잉",
@@ -215,101 +211,121 @@ const galleryPopup = () => {
     },
   ];
 
-
-modalcontainer.addEventListener("click", (e) => {
-  if (modalcontainer.classList.contains("active")) {
-    modalcontainer.classList.remove("active");
-  } else {
-    modalcontainer.classList.add("active");
-  }
-});
-
-thumbnail.forEach((e, i) => {
-  e.addEventListener("click", (event) => {
-    event.preventDefault(0);
-    modalcontainer.style.left = 0;
-    closeBtn.style.display = "block";
-    dim.style.display = "block";
-    containertitle.textContent = datas[i].title;
-    containerdate.textContent = datas[i].date;
-    meno.textContent = datas[i].memo;
-    work.setAttribute("src", datas[i].img);
-
-    
-    photo0.setAttribute("src", datas[i].img);
-    photo1.setAttribute("src", datas[i].photo1);
-    photo2.setAttribute("src", datas[i].photo2);
+  modalcontainer.addEventListener("click", (e) => {
+    if (modalcontainer.classList.contains("active")) {
+      modalcontainer.classList.remove("active");
+    } else {
+      modalcontainer.classList.add("active");
+    }
   });
-});
 
+  thumbnail.forEach((e, i) => {
+    e.addEventListener("click", (event) => {
+      event.preventDefault(0);
+      modalcontainer.style.left = 0;
+      closeBtn.style.display = "block";
+      dim.style.display = "block";
+      containertitle.textContent = datas[i].title;
+      containerdate.textContent = datas[i].date;
+      meno.textContent = datas[i].memo;
+      work.setAttribute("src", datas[i].img);
 
-smallThumbs.forEach( (e,idx) => {
-  e.addEventListener('click', () => {
-    const imgUrl = e.getAttribute('src');
-    work.setAttribute('src', imgUrl);
-    containertitle.innerHTML=e.dataset.title;
-    containerdate.innerHTML=e.dataset.created;
+      photo0.setAttribute("src", datas[i].img);
+      photo1.setAttribute("src", datas[i].photo1);
+      photo2.setAttribute("src", datas[i].photo2);
+    });
+  });
 
-    
-  })
-})
+  smallThumbs.forEach((e, idx) => {
+    e.addEventListener("click", () => {
+      const imgUrl = e.getAttribute("src");
+      work.setAttribute("src", imgUrl);
+      containertitle.innerHTML = e.dataset.title;
+      containerdate.innerHTML = e.dataset.created;
+    });
+  });
 
-  
-closeBtn.addEventListener("click", (e) => {
-  modalcontainer.style.left = "-600px";
-  closeBtn.style.display = "none";
-  dim.style.display = "none";
-});
+  closeBtn.addEventListener("click", (e) => {
+    modalcontainer.style.left = "-600px";
+    closeBtn.style.display = "none";
+    dim.style.display = "none";
+  });
 
-dim.addEventListener("click", (e) => {
-  modalcontainer.style.left = "-600px";
-  dim.style.display = "none";
-  closeBtn.style.display = "none";
-});
-
-
-}
-
-
+  dim.addEventListener("click", (e) => {
+    modalcontainer.style.left = "-600px";
+    dim.style.display = "none";
+    closeBtn.style.display = "none";
+  });
+};
 
 const sendContact = () => {
-  const contactsWrap = document.querySelector('.contacts');
-  if(!contactsWrap) {
+  const contactsWrap = document.querySelector(".contacts");
+  const container = document.querySelector(".contact-container");
+  if (!contactsWrap) {
     return false;
-
   }
 
-  const title = contactsWrap.querySelector('.entry input');
-  const button = contactsWrap.querySelector('.btn-send');
-  const content = contactsWrap.querySelector('.title teatarea');
-  
-  
-  const result = document.getElementById('result');
-  const h1 = result.querySelector('h1');
-  const p = result.querySelector('p'); 
+  const entry = contactsWrap.querySelector(".title");
+  const button = contactsWrap.querySelector(".btn-send");
+  const title = contactsWrap.querySelector(".contents");
 
-  button.addEventListener('click', (e) => {
- console.log('button')
+  const result = contactsWrap.querySelector(".contact-result");
+  const h1 = result.querySelector("h1");
+  const p = result.querySelector("p");
+
+  button.addEventListener("click", () => {
+    h1.textContent = entry.value;
+    p.textContent = title.value;
+    container.style.display = "none";
+    result.style.display = "block";
   });
-}
+};
 
 const skillsAni = () => {
-
+  const skills = document.querySelector(".skills");
+  const skill_html = document.getElementById("skill_html");
+  const bars = document.querySelectorAll('.pro_bar');
+  console.log(bars, bars.length)
+//   console.log(bar, bar.nodeName)
+// console.log(bar.previousSibling, bar.previousElementSibling);
+// console.log(bar.nextSibling, bar.nextElementSibling);
+  
+  
+const barUpdate = () => {
+  bars.forEach((bar, index)=>{
+    bar.value = bar.innerHTML; 
+    bar.nextElementSibling.textContent = bar.value + '%';
+    // bar.nextSibling.textContent = '<span>hello</span>'
+  }) 
 }
+ 
+  window.addEventListener("scroll", (e) => {
+    const posT = skills.getBoundingClientRect().top;
+    if (posT < window.innerHeight / 2) {
+      console.log("skills showed");
+      barUpdate();
+      // skill_html.value = skill_html.value + interval;
+    } else {
+      console.log("not showed");
+    }
+  });
+ 
+};
 
 const headerScroll = () => {
   const header = document.querySelector(".header_wrap");
-  if(!header ) {
+  if (!header) {
     return false;
   }
-  header.addEventListener("scroll", (e) => {
-    if (window.pageYOffset > 50) {
-      herder.classList.add("fixed");
+  window.addEventListener("scroll", (e) => {
+    //console.log('now scoll.Y : ', window.pageYOffset)
+    if (window.pageYOffset > 400) {
+      header.classList.add("fixed");
     } else {
-      herder.classList.remove("fixed");
+      header.classList.remove("fixed");
     }
   });
-}
+};
 
 profileGallery();
 galleryPopup();
