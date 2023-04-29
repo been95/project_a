@@ -303,7 +303,7 @@ const barUpdate = () => {
     const posT = skills.getBoundingClientRect().top;
     if (posT < window.innerHeight / 2) {
       console.log("skills showed");
-      barUpdate();
+      barUpdate();햣
       // skill_html.value = skill_html.value + interval;
     } else {
       console.log("not showed");
