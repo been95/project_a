@@ -289,21 +289,34 @@ const skillsAni = () => {
 //   console.log(bar, bar.nodeName)
 // console.log(bar.previousSibling, bar.previousElementSibling);
 // console.log(bar.nextSibling, bar.nextElementSibling);
-  
-  
+ 
 const barUpdate = () => {
   bars.forEach((bar, index)=>{
     bar.value = bar.innerHTML; 
     bar.nextElementSibling.textContent = bar.value + '%';
     // bar.nextSibling.textContent = '<span>hello</span>'
-  }) 
+  })
+  
+
+
 }
- 
+
+const barAni = () =>{
+  const max = bars.innerHTML;
+  console.log(bars.innerHTML)
+  let count = bars.value;
+  if(count < max ){
+    count++;
+  }
+  bars.value = count;
+};
+setInterval(barAni, 30);
+  
   window.addEventListener("scroll", (e) => {
     const posT = skills.getBoundingClientRect().top;
     if (posT < window.innerHeight / 2) {
       console.log("skills showed");
-      barUpdate();햣
+      barUpdate();
       // skill_html.value = skill_html.value + interval;
     } else {
       console.log("not showed");
