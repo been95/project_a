@@ -29,6 +29,12 @@
       width: 50px;
     }
 
+    strong {
+      &:after {
+        content:'%';
+      }
+    }
+
     progress {
       flex-grow: 1;
       height: 22px;
@@ -52,11 +58,15 @@
     .wrap { color : nth($button,2)}
 */
 
-progress::-webkit-progress-value {
+  progress::-webkit-progress-value { 
+    border-radius: 20px;
+    transition-property:all;
+    transition-duration:0.4s;
+  }
+
  
-  border-radius: 20px;
-}
-$bars:#e85832, #379CE2, #E9AD39, #CD63AD ,#1469AA;
+  $bars:#e85832, #379CE2, #E9AD39, #CD63AD ,#1469AA;
+  $times : 0, 0.2s, 0.4s, 0.6s, 0.8s;
 
 /*
 &:nth-child(1) progress::-webkit-progress-value { background-color: nth($bars,1)};
@@ -69,6 +79,7 @@ $bars:#e85832, #379CE2, #E9AD39, #CD63AD ,#1469AA;
   @for $i from 1 through 5 {
     &:nth-child(#{$i}) progress::-webkit-progress-value {
       background-color: nth($bars,$i) ;
+      transition-delay:nth($times, $i);
     }
   }
     

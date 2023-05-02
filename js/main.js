@@ -285,41 +285,36 @@ const skillsAni = () => {
   const skills = document.querySelector(".skills");
   const skill_html = document.getElementById("skill_html");
   const bars = document.querySelectorAll('.pro_bar');
-  console.log(bars, bars.length)
-//   console.log(bar, bar.nodeName)
-// console.log(bar.previousSibling, bar.previousElementSibling);
-// console.log(bar.nextSibling, bar.nextElementSibling);
+ 
+  // bars.forEach(bar => {
+  //   console.log(bar, bar.value)
+  //   let size = bar.nextElementSibling.innerHTML;
+  //   bar.value = size;
+  //   bar.innerHTML = size;
+  // })
+ 
  
 const barUpdate = () => {
   bars.forEach((bar, index)=>{
-    bar.value = bar.innerHTML; 
-    bar.nextElementSibling.textContent = bar.value + '%';
-    // bar.nextSibling.textContent = '<span>hello</span>'
+    let size = bar.nextElementSibling.textContent;
+    bar.value = size;
+    bar.innerHTML = size;
   })
-  
-
-
 }
 
-const barAni = () =>{
-  const max = bars.innerHTML;
-  console.log(bars.innerHTML)
-  let count = bars.value;
-  if(count < max ){
-    count++;
-  }
-  bars.value = count;
-};
-setInterval(barAni, 30);
+const barReset = () => {
+  bars.forEach(bar => {
+    bar.value= 0;
+    bar.innerHTML = '';
+  })
+}
   
   window.addEventListener("scroll", (e) => {
     const posT = skills.getBoundingClientRect().top;
-    if (posT < window.innerHeight / 2) {
-      console.log("skills showed");
-      barUpdate();
-      // skill_html.value = skill_html.value + interval;
+    if (posT < window.innerHeight / 2) { 
+      barUpdate(); 
     } else {
-      console.log("not showed");
+      barReset();
     }
   });
  

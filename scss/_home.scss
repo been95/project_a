@@ -1,5 +1,64 @@
 .home {
-  img {
-    width: 100%;
+  height:100vh;
+  position:relative;
+  background:url($url + 'main.png') no-repeat center center/cover;
+
+
+  .stars {
+    span {
+      animation:twinkleStar 1s infinite alternate both;
+    }
+     
+    span:nth-child(1) {
+       left:50px;top:100px;
+      @include star(10px, gold);
+     }
+     span:nth-child(2) {
+      @include star(5px);
+      right:100px;top:300px;
+      animation-delay:0.5s;
+     }
+
+     span:nth-child(3) {
+      left:50%; top:120px;
+      @include star(8px, rgb(48, 211, 211)); 
+     }
+    span:nth-child(4) {
+       left:150px;top:200px;
+      @include star(10px, gold);
+      animation-delay:0.7s;
+     }
+     span:nth-child(5) {
+      @include star(5px);
+      right:200px;top:250px;
+      animation-delay:1.2s;
+     }
+
+     span:nth-child(6) {
+      left:50%; bottom:120px;
+      animation-delay:0.2s;
+      @include star(8px, rgb(48, 211, 211)); 
+     }
   }
+
+
+  .circle {
+    //  @include circle(80px, gold);
+    @include star(80px, gold);
+    position:absolute;
+    right:50%;
+    top:200px;
+    animation:moveUpDown 0.8s infinite linear alternate;
+  }
+}
+
+@keyframes twinkleStar {
+  0% { opacity:0;}
+  100% { opacity:1;} 
+}
+
+
+@keyframes moveUpDown {
+  0% { transform:translateY(0)}
+  100% { transform:translateY(-8px)}
 }

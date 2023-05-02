@@ -26,3 +26,24 @@
   border-radius: 50%;
   background-color: rgba($color, 0.5);
 }
+
+@mixin star($size, $color:#fff) {
+  position:absolute;
+  
+  display:block;
+  width:$size;
+  height:$size;
+  border-radius:50%;
+  background-color:$color;
+  
+  box-shadow:0 0 13px rgba($color,0.8);
+  // box-shadow:0 0 3px #{rgba($color, 0.3)};
+ 
+}
+
+@mixin circle($size, $color:white) {
+  border-radius:50%;
+  width:$size;
+  height:$size;
+  background-color:$color;
+}
