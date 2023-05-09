@@ -1,64 +1,190 @@
 .home {
-  height:100vh;
-  position:relative;
-  background:url($url + 'main.png') no-repeat center center/cover;
-
+  height: 100vh;
+  position: relative;
+  background: url($url + "main.png") no-repeat center center/cover;
 
   .stars {
     span {
-      animation:twinkleStar 1s infinite alternate both;
+      animation: twinkleStar 1s infinite alternate both;
     }
-     
+
     span:nth-child(1) {
-       left:50px;top:100px;
+      left: 50px;
+      top: 100px;
       @include star(10px, gold);
-     }
-     span:nth-child(2) {
+    }
+    span:nth-child(2) {
       @include star(5px);
-      right:100px;top:300px;
-      animation-delay:0.5s;
-     }
+      right: 100px;
+      top: 300px;
+      animation-delay: 0.5s;
+    }
 
-     span:nth-child(3) {
-      left:50%; top:120px;
-      @include star(8px, rgb(48, 211, 211)); 
-     }
+    span:nth-child(3) {
+      left: 50%;
+      top: 120px;
+      @include star(8px, rgb(48, 211, 211));
+    }
     span:nth-child(4) {
-       left:150px;top:200px;
+      left: 150px;
+      top: 200px;
       @include star(10px, gold);
-      animation-delay:0.7s;
-     }
-     span:nth-child(5) {
+      animation-delay: 0.7s;
+    }
+    span:nth-child(5) {
       @include star(5px);
-      right:200px;top:250px;
-      animation-delay:1.2s;
-     }
+      right: 200px;
+      top: 250px;
+      animation-delay: 1.2s;
+    }
 
-     span:nth-child(6) {
-      left:50%; bottom:120px;
-      animation-delay:0.2s;
-      @include star(8px, rgb(48, 211, 211)); 
-     }
+    span:nth-child(6) {
+      left: 50%;
+      bottom: 120px;
+      animation-delay: 0.2s;
+      @include star(8px, rgb(48, 211, 211));
+    }
+    span:nth-child(7) {
+      left: 50%;
+      bottom: 120px;
+      animation: moveleft 0.5s infinite linear alternate;
+      background-image: url($url + "home11.png");
+      left: 472px;
+      bottom: 100px;
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+    }
   }
-
-
-  .circle {
-    //  @include circle(80px, gold);
-    @include star(80px, gold);
-    position:absolute;
-    right:50%;
-    top:200px;
-    animation:moveUpDown 0.8s infinite linear alternate;
+  .thing {
+    span {
+      position: absolute;
+      display: block;
+    }
+    span:nth-child(1) {
+      background-image: url($url + "home1.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 0.8s infinite linear alternate;
+      left: 472px;
+      bottom: 495px;
+      width: 60px;
+      height: 60px;
+    }
+    span:nth-child(2) {
+      background-image: url($url + "home2.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1s infinite linear alternate;
+      left: 400px;
+      bottom: 745px;
+      width: 100px;
+      height: 100px;
+    }
+    span:nth-child(3) {
+      background-image: url($url + "home3.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 0.9s infinite linear alternate;
+      left: 900px;
+      bottom: 724px;
+      width: 100px;
+      height: 100px;
+    }
+    span:nth-child(4) {
+      background-image: url($url + "home4.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1s infinite linear alternate;
+      right: 400px;
+      bottom: 800px;
+      width: 100px;
+      height: 100px;
+    }
+    span:nth-child(5) {
+      background-image: url($url + "home5.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.2s infinite linear alternate;
+      right: 100px;
+      bottom: 700px;
+      width: 170px;
+      height: 100px;
+    }
+    span:nth-child(6) {
+      background-image: url($url + "home6.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.5s infinite linear alternate;
+      right: 140px;
+      bottom: 500px;
+      width: 170px;
+      height: 100px;
+    }
+    span:nth-child(7) {
+      background-image: url($url + "home7.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.5s infinite linear alternate;
+      right: 40px;
+      bottom: 350px;
+      width: 170px;
+      height: 100px;
+    }
+    span:nth-child(8) {
+      background-image: url($url + "home8.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.5s infinite linear alternate;
+      left: 40px;
+      bottom: 350px;
+      width: 170px;
+      height: 170px;
+    }
+    span:nth-child(9) {
+      background-image: url($url + "home9.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.8s infinite linear alternate;
+      right: 40px;
+      bottom: 50px;
+      width: 170px;
+      height: 170px;
+    }
+    span:nth-child(10) {
+      background-image: url($url + "home10.png");
+      background-repeat: no-repeat;
+      animation: moveUpDown 1.8s infinite linear alternate;
+      left: 720px;
+      bottom: 600px;
+      width: 170px;
+      height: 170px;
+    }
   }
+  // .circle {
+  //   //  @include circle(80px, gold);
+  //   @include star(80px, gold);
+  //   position: absolute;
+  //   right: 50%;
+  //   top: 200px;
+  //   animation: moveUpDown 0.8s infinite linear alternate;
+  // }
 }
 
 @keyframes twinkleStar {
-  0% { opacity:0;}
-  100% { opacity:1;} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-
 @keyframes moveUpDown {
-  0% { transform:translateY(0)}
-  100% { transform:translateY(-8px)}
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(-8px);
+  }
 }
