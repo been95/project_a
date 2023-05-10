@@ -56,101 +56,49 @@
       background-repeat: no-repeat;
     }
   }
+
   .thing {
     span {
       position: absolute;
       display: block;
+      background-repeat:no-repeat;
+      background-size:contain;
     }
-    span:nth-child(1) {
-      background-image: url($url + "home1.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 0.8s infinite linear alternate;
-      left: 472px;
-      bottom: 495px;
-      width: 60px;
-      height: 60px;
+
+    $ani : 0.8, 1, 0.9, 1, 1.2, 1.5, 1.5, 1.5, 1.8, 1.8, 0.4, 0.4;
+    $w: 60px, 100px, 100px, 100px, 170px, 170px, 170px, 170px, 170px,170px, 170px, 19px;
+    $h :  60px, 100px, 100px, 100px, 170px, 170px, 170px, 170px, 170px,170px, 170px, 20px;
+    $l : 472px, 400px, 900px, auto, auto, auto, auto, 40px, auto, 720px, 950px, 50%;
+    $b: 495px, 745px, 724px, 800px, 705px, 500px, 350px, 350px, 50px, 600px, 230px, 50%;
+    $r : auto, auto, auto, 400px, 100px, 140px, 40px, auto,40px, auto, auto, auto;
+    
+    $count : 12;
+    @for $i from 1 through $count {
+      @debug $i;
+      span:nth-child(#{$i}) {
+        background-image:url($url + 'home#{$i}.png');
+        animation: #{nth($ani, $i)}s infinite linear alternate;
+        width:nth($w, $i);
+        height:nth($h, $i);
+        left:nth($l, $i); 
+        bottom:nth($b, $i);
+        right:nth($r,$i);
+
+        @if ($i < $count ) {
+          animation-name:moveUpDown
+        } @else {
+          animation-name:appleGlow
+        }
+      }
     }
-    span:nth-child(2) {
-      background-image: url($url + "home2.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1s infinite linear alternate;
-      left: 400px;
-      bottom: 745px;
-      width: 100px;
-      height: 100px;
+
+    @keyframes appleGlow {
+      0% { opacity:0;}
+      100% { opacity:1;}
     }
-    span:nth-child(3) {
-      background-image: url($url + "home3.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 0.9s infinite linear alternate;
-      left: 900px;
-      bottom: 724px;
-      width: 100px;
-      height: 100px;
-    }
-    span:nth-child(4) {
-      background-image: url($url + "home4.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1s infinite linear alternate;
-      right: 400px;
-      bottom: 800px;
-      width: 100px;
-      height: 100px;
-    }
-    span:nth-child(5) {
-      background-image: url($url + "home5.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.2s infinite linear alternate;
-      right: 100px;
-      bottom: 705px;
-      width: 170px;
-      height: 100px;
-    }
-    span:nth-child(6) {
-      background-image: url($url + "home6.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.5s infinite linear alternate;
-      right: 140px;
-      bottom: 500px;
-      width: 170px;
-      height: 100px;
-    }
-    span:nth-child(7) {
-      background-image: url($url + "home7.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.5s infinite linear alternate;
-      right: 40px;
-      bottom: 350px;
-      width: 170px;
-      height: 100px;
-    }
-    span:nth-child(8) {
-      background-image: url($url + "home8.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.5s infinite linear alternate;
-      left: 40px;
-      bottom: 350px;
-      width: 170px;
-      height: 170px;
-    }
-    span:nth-child(9) {
-      background-image: url($url + "home9.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.8s infinite linear alternate;
-      right: 40px;
-      bottom: 50px;
-      width: 170px;
-      height: 170px;
-    }
-    span:nth-child(10) {
-      background-image: url($url + "home10.png");
-      background-repeat: no-repeat;
-      animation: moveUpDown 1.8s infinite linear alternate;
-      left: 720px;
-      bottom: 600px;
-      width: 170px;
-      height: 170px;
-    }
+
+    
+   
   }
   // .circle {
   //   //  @include circle(80px, gold);
