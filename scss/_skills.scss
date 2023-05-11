@@ -1,6 +1,5 @@
 .skills {
   height: 100vh;
-  
 
   @include flex(center, center);
   .inner {
@@ -22,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
     */
-    @include flex($a:center);
+    @include flex($a: center);
     column-gap: 40px;
 
     img {
@@ -31,7 +30,7 @@
 
     strong {
       &:after {
-        content:'%';
+        content: "%";
       }
     }
 
@@ -45,7 +44,7 @@
       background: #d9d9d9;
       border-radius: 20px;
     }
-  /*
+    /*
     $nextButton : black;
     $button : red ,green, blue;
     $buttons : (
@@ -58,31 +57,53 @@
     .wrap { color : nth($button,2)}
 */
 
-  progress::-webkit-progress-value { 
-    border-radius: 20px;
-    transition-property:all;
-    transition-duration:0.4s;
-  }
+    progress::-webkit-progress-value {
+      border-radius: 20px;
+      transition-property: all;
+      transition-duration: 0.4s;
+    }
 
- 
-  $bars:#e85832, #379CE2, #E9AD39, #CD63AD ,#1469AA;
-  $times : 0, 0.2s, 0.4s, 0.6s, 0.8s;
+    $bars: #e85832, #379ce2, #e9ad39, #cd63ad, #1469aa;
+    $times: 0, 0.2s, 0.4s, 0.6s, 0.8s;
 
-/*
+    /*
 &:nth-child(1) progress::-webkit-progress-value { background-color: nth($bars,1)};
 &:nth-child(2) progress::-webkit-progress-value { background-color: nth($bars,2)};
 &:nth-child(3) progress::-webkit-progress-value { background-color: nth($bars,3)};
 &:nth-child(4) progress::-webkit-progress-value { background-color: nth($bars,4)};
 &:nth-child(5) progress::-webkit-progress-value { background-color: nth($bars,5)};
-*/  
+*/
 
-  @for $i from 1 through 5 {
-    &:nth-child(#{$i}) progress::-webkit-progress-value {
-      background-color: nth($bars,$i) ;
-      transition-delay:nth($times, $i);
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) progress::-webkit-progress-value {
+        background-color: nth($bars, $i);
+        transition-delay: nth($times, $i);
+      }
     }
   }
-    
+}
+@media all and (max-width: 1200px) {
+  .skills {
+    height: auto;
+    .inner {
+      padding: 20px;
+    }
+  }
+}
+@media all and (max-width: 1200px) {
+  .gallery {
+    height: auto;
+    .list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
 
+@media all and (max-width: 960px) {
+  .gallery {
+    height: auto;
+    .list {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

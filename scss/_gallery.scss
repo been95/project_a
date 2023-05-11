@@ -142,3 +142,21 @@
   */
   @include full;
 }
+
+@media all and (max-width: 1200px) {
+  .gallery {
+    height: auto;
+    .list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .gallery {
+    height: auto;
+    .list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
