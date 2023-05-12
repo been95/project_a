@@ -145,7 +145,7 @@
 
 @media all and (max-width: 1200px) {
   .gallery {
-    height:  auto;
+    height: auto;
     .list {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -153,31 +153,31 @@
 }
 
 @media all and (max-width: 960px) {
-   
 }
-
-
 
 @media all and (max-width: 720px) {
   .gallery {
-
     .list {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  .modal-container {
+    width: 100%;
+    .btn-close {
+      width: 40px;
+      height: 40px;
+      right: 5%;
+    }
+  }
 }
-
 
 @media all and (max-width: 480px) {
   .gallery {
-
     .list {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-
 @media all and (max-width: 375px) {
- 
 }
