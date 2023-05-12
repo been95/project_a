@@ -63,9 +63,47 @@
     padding:50px 0;
     height:auto;
     .inner {
-      display:flex;
-      flex-direction:column-reverse;
       height:auto;
+      column-gap: 20px;
+      .big {
+        height:500px;
+        overflow:hidden;
+      }
+
+    }
+    .photos {
+      img {
+        height:130px;
+      }
     }
   }
 }
+@media all and (max-width:720px) {
+  .Profile {
+    .inner{
+      display: block;
+      .big{
+        display: none;
+      }
+      .info{
+        display: block;
+      }
+      .photos{
+        margin: 20px 0 0 ;
+      }
+    }
+  }
+}
+@media all and (max-width:375px){
+  .Profile{
+    .photos{
+      display:block;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+  }
+}
+ 

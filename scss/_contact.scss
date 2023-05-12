@@ -77,14 +77,22 @@
 @media all and (max-width: 960px) {
   .contacts {
     height: auto;
+    display:block;
     .inner {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
+      
+      display:block;
+      text-align:center;
       height: auto;
       .contacts-img {
-        padding: 30px;
+       
       }
+    }
+  }
+}
+@media all and (max-width:720px){
+  .contacts{
+    .contacts-inner{
+      width: auto;
     }
   }
 }

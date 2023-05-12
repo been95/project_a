@@ -145,18 +145,39 @@
 
 @media all and (max-width: 1200px) {
   .gallery {
-    height: auto;
+    height:  auto;
+    .list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+   
+}
+
+
+
+@media all and (max-width: 720px) {
+  .gallery {
+
     .list {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
-@media all and (max-width: 960px) {
+
+@media all and (max-width: 480px) {
   .gallery {
-    height: auto;
+
     .list {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
+}
+
+
+@media all and (max-width: 375px) {
+ 
 }
