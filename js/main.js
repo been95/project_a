@@ -42,7 +42,7 @@ const galleryPopup = () => {
       date: "2022.08.13",
       type: "디지털드로잉",
       tool: "아이패드 프로크리에이트",
-      memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
+      memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포 츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
       photo1: "./img/g2.jpg",
       photo2: "./img/g3.jpg",
     },
@@ -211,19 +211,18 @@ const galleryPopup = () => {
     },
   ];
 
-  modalcontainer.addEventListener("click", (e) => {
+  /*modalcontainer.addEventListener("click", (e) => {
     if (modalcontainer.classList.contains("active")) {
       modalcontainer.classList.remove("active");
     } else {
       modalcontainer.classList.add("active");
     }
-  });
-
+  });*/
   thumbnail.forEach((e, i) => {
     e.addEventListener("click", (event) => {
       event.preventDefault(0);
       modalcontainer.style.left = 0;
-      closeBtn.style.display = "block";
+      closeBtn.style.display = "flex";
       dim.style.display = "block";
       containertitle.textContent = datas[i].title;
       containerdate.textContent = datas[i].date;
@@ -246,13 +245,13 @@ const galleryPopup = () => {
   });
 
   closeBtn.addEventListener("click", (e) => {
-    modalcontainer.style.left = "-600px";
+    modalcontainer.style.left = "-100%";
     closeBtn.style.display = "none";
     dim.style.display = "none";
   });
 
   dim.addEventListener("click", (e) => {
-    modalcontainer.style.left = "-600px";
+    modalcontainer.style.left = "-100%";
     dim.style.display = "none";
     closeBtn.style.display = "none";
   });
