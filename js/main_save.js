@@ -32,23 +32,22 @@ const photo0 = modalcontainer.querySelector(".photo0");
 const photo1 = modalcontainer.querySelector(".photo1");
 const photo2 = modalcontainer.querySelector(".photo2");
 const work = modalcontainer.querySelector(".work");
-const smallThumbs = modalcontainer.querySelectorAll('.modal-cotents-img img');
+const smallThumbs = modalcontainer.querySelectorAll(".modal-cotents-img img");
 
-console.log('small thumbs : ', smallThumbs);
-console.log('last commit')
- 
+console.log("small thumbs : ", smallThumbs);
+console.log("last commit");
+
 const datas = [
   {
     id: 0,
     img: "./img/g1.jpg",
-    title: "히포와 베이킹",
-    date: "2022.08.13",
-    type: "디지털드로잉",
-    tool: "아이패드 프로크리에이트",
-    memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
+    title: "베베링크 웹디자인",
+    date: "2020. 8. 20",
+    type: "웹사이트",
+    tool: "포토샵",
+    memo: "육아용품 웹디자인",
     photo1: "./img/g2.jpg",
     photo2: "./img/g3.jpg",
-
   },
   {
     id: 1,
@@ -249,25 +248,20 @@ thumbnail.forEach((e, i) => {
     meno.textContent = datas[i].memo;
     work.setAttribute("src", datas[i].img);
 
-    
     photo0.setAttribute("src", datas[i].img);
     photo1.setAttribute("src", datas[i].photo1);
     photo2.setAttribute("src", datas[i].photo2);
   });
 });
 
-
-smallThumbs.forEach( (e,idx) => {
-  e.addEventListener('click', () => {
-    const imgUrl = e.getAttribute('src');
-    work.setAttribute('src', imgUrl);
-    containertitle.innerHTML=e.dataset.title;
-    containerdate.innerHTML=e.dataset.created;
-
-    
-  })
-})
-
+smallThumbs.forEach((e, idx) => {
+  e.addEventListener("click", () => {
+    const imgUrl = e.getAttribute("src");
+    work.setAttribute("src", imgUrl);
+    containertitle.innerHTML = e.dataset.title;
+    containerdate.innerHTML = e.dataset.created;
+  });
+});
 
 /*
 photo0.addEventListener('click', (e) => {

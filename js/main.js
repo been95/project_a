@@ -38,20 +38,20 @@ const galleryPopup = () => {
     {
       id: 0,
       img: "./img/g1.jpg",
-      title: "히포와 베이킹",
-      date: "2022.08.13",
-      type: "디지털드로잉",
-      tool: "아이패드 프로크리에이트",
-      memo: "츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포 츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포츄덕이랑 같이 하는 베이킹은 세상에서 제일 재미있는 히포",
+      title: "베베링크 웹디자인",
+      date: "2020.08.13",
+      type: "웹디자인",
+      tool: "포토샵, 피그마",
+      memo: "육아전문 사이트",
       photo1: "./img/g2.jpg",
       photo2: "./img/g3.jpg",
     },
     {
       id: 1,
       img: "./img/g2.jpg",
-      title: "딩굴딩굴",
+      title: "보험의반하다",
       date: "2022.08.18",
-      type: "디지털드로잉",
+      type: "웹디자인",
       tool: "아이패드 프로크리에이트",
       memo: "한가로운 주말에 집에서 딩굴딩굴 거리고 있는 츄덕이",
       photo1: "./img/g3.jpg",
@@ -60,21 +60,21 @@ const galleryPopup = () => {
     {
       id: 2,
       img: "./img/g3.jpg",
-      title: "노을",
+      title: "의류쇼핑몰",
       date: "2022.11.16",
-      type: "디지털드로잉",
-      tool: "아이패드 프로크리에이트",
-      memo: "집에 가는 길에 노을과 함께 만난 친구들",
+      type: "웹디자인",
+      tool: "포토샵 피그마",
+      memo: "의류쇼핑몰 웹디자인",
       photo1: "./img/g4.jpg",
       photo2: "./img/g5.jpg",
     },
     {
       id: 3,
       img: "./img/g4.jpg",
-      title: "시험기간",
+      title: "호호네 웹디자인",
       date: "2022.10.05",
-      type: "디지털드로잉",
-      tool: "아이패드 프로크리에이트",
+      type: "웹디자인",
+      tool: "포토샵,피그마",
       memo: "시험기간에 넷플리스 보면서 공부 안하고 있는 츄덕이",
       photo1: "./img/g5.jpg",
       photo2: "./img/g6.jpg",
@@ -283,40 +283,38 @@ const sendContact = () => {
 const skillsAni = () => {
   const skills = document.querySelector(".skills");
   const skill_html = document.getElementById("skill_html");
-  const bars = document.querySelectorAll('.pro_bar');
- 
+  const bars = document.querySelectorAll(".pro_bar");
+
   // bars.forEach(bar => {
   //   console.log(bar, bar.value)
   //   let size = bar.nextElementSibling.innerHTML;
   //   bar.value = size;
   //   bar.innerHTML = size;
   // })
- 
- 
-const barUpdate = () => {
-  bars.forEach((bar, index)=>{
-    let size = bar.nextElementSibling.textContent;
-    bar.value = size;
-    bar.innerHTML = size;
-  })
-}
 
-const barReset = () => {
-  bars.forEach(bar => {
-    bar.value= 0;
-    bar.innerHTML = '';
-  })
-}
-  
+  const barUpdate = () => {
+    bars.forEach((bar, index) => {
+      let size = bar.nextElementSibling.textContent;
+      bar.value = size;
+      bar.innerHTML = size;
+    });
+  };
+
+  const barReset = () => {
+    bars.forEach((bar) => {
+      bar.value = 0;
+      bar.innerHTML = "";
+    });
+  };
+
   window.addEventListener("scroll", (e) => {
     const posT = skills.getBoundingClientRect().top;
-    if (posT < window.innerHeight / 2) { 
-      barUpdate(); 
+    if (posT < window.innerHeight / 2) {
+      barUpdate();
     } else {
       barReset();
     }
   });
- 
 };
 
 const headerScroll = () => {

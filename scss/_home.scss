@@ -1,47 +1,86 @@
 .home {
   height: 100vh;
   position: relative;
-  background: url($url + 'main_bg.png') no-repeat center center/cover; 
+  background: url($url + "main_bg.png") no-repeat center center/cover;
 
   .designer {
-    outline:1px solid blue;
-    position:absolute;
-    left:50%;bottom:0;
-    height:100%;
-    max-height:500px;
-    width:100%;
-    max-width:1300px;
-    transform:translateX(-50%);
-    background: url($url + 'main_designer.png') no-repeat center bottom/contain; 
-
+    outline: 1px solid blue;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 100%;
+    max-height: 500px;
+    width: 100%;
+    max-width: 1300px;
+    transform: translateX(-50%);
+    background: url($url + "main_designer.png") no-repeat center bottom/contain;
 
     .airdrops {
-      position:absolute;
-      top:0;
-      right:250px;
-      outline:1px solid red;
-      width:200px;
-      height:200px;
+      position: absolute;
+      top: 0;
+      right: 250px;
+      width: 200px;
+      height: 200px;
+
+      span:nth-child(1) {
+        background: url($url + "drop4.png") no-repeat center;
+        width: 32px;
+        height: 32px;
+        display: block;
+      }
+      span:nth-child(2) {
+        background: url($url + "drop3.png") no-repeat center;
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+      span:nth-child(3) {
+        background: url($url + "drop2.png") no-repeat center;
+        width: 13px;
+        height: 13px;
+        display: block;
+      }
+      span:nth-child(4) {
+        background: url($url + "drop1.png") no-repeat center;
+        width: 5px;
+        height: 5px;
+        display: block;
+      }
     }
   }
 
   @keyframes rotateSide {
-    0% { transform:rotate(-20deg) translateY(0)  }
-    100% { transform:rotate(20deg) translateY(-10px)  }
+    0% {
+      transform: rotate(-20deg) translateY(0);
+    }
+    100% {
+      transform: rotate(20deg) translateY(-10px);
+    }
   }
 
   @keyframes starGroup {
-  0% { transform:translate(0,0); opacity:1;}
-  100% {transform:translate(-700px, 700px); opacity:0;}
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-700px, 700px);
+      opacity: 0;
+    }
   }
-  .starGroup { 
-    animation:starGroup 2s 3s infinite ease-in both;
-    position:absolute;
-    right:200px;
-    top:-200px;
-    width:250px;
+  .starGroup {
+    animation: starGroup 2s 3s infinite ease-in both;
+    position: absolute;
+    right: 200px;
+    top: -200px;
+    width: 250px;
     img {
-      width:100%;
+      width: 100%;
+    }
+    span:nth-child(1) {
+      left: 50px;
+      top: 100px;
+      @include star(10px, gold);
     }
   }
   .stars {
@@ -106,8 +145,6 @@
       background-size: contain;
     }
 
-   
-
     $ani: 0.8, 1, 0.9, 1, 1.2, 1.5, 1.5, 1.5, 1.8, 1.8, 0.4, 0.4;
     $w: 60px, 100px, 77px, 58px, 170px, 145px, 79px, 91px, 107px, 95px, 57px, 19px;
     $h: 60px, 100px, 77px, 58px, 170px, 100px, 79px, 116px, 95px, 162px, 170px, 20px;
@@ -116,8 +153,8 @@
     $r: auto, auto, auto, 410px, 74px, 324px, 151px, auto, 40px, auto, auto, auto;
 
     $count: 12;
-    $rocket : 10;
-    $apple : 12;
+    $rocket: 10;
+    $apple: 12;
 
     @for $i from 1 through $count {
       @debug $i;
@@ -130,29 +167,28 @@
         bottom: nth($b, $i);
         right: nth($r, $i);
 
-        @if ( $i == $rocket ) { 
-          animation:rocket 3s 1s infinite ease-in both;
-        } @else if ( $i == $apple) {
-          animation-name:appleGlow;
+        @if ($i == $rocket) {
+          animation: rocket 3s 1s infinite ease-in both;
+        } @else if ($i == $apple) {
+          animation-name: appleGlow;
         } @else {
           animation-name: moveUpDown;
         }
-        
       }
     }
 
     span.no5 {
-      animation:rotateSide 2s infinite alternate both;
-      top:200px;
+      animation: rotateSide 2s infinite alternate both;
+      top: 200px;
     }
 
     @keyframes rocket {
       0% {
-        transform:transform(0,0) scale(1);
+        transform: transform(0, 0) scale(1);
       }
 
       100% {
-        transform:translate(-300px, -900px) scale(0.5);
+        transform: translate(-300px, -900px) scale(0.5);
       }
     }
 
