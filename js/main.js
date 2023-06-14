@@ -33,6 +33,10 @@ const galleryPopup = () => {
   const photo2 = modalcontainer.querySelector(".photo2");
   const work = modalcontainer.querySelector(".work");
   const smallThumbs = modalcontainer.querySelectorAll(".modal-cotents-img img");
+  const viewSite = modalcontainer.querySelector(".link")
+  let nextImg1 = 0;
+  let nextImg2 = 0;
+  let currentImg = 0;
   const datas = [
     {
       id: 0,
@@ -42,8 +46,8 @@ const galleryPopup = () => {
       type: "웹디자인",
       tool: "포토샵, 피그마",
       memo: "육아전문 사이트",
-      photo1: "./img/g2.jpg",
-      photo2: "./img/g3.jpg",
+      link: "http://bebelink.dothome.co.kr/",
+      
     },
     {
       id: 1,
@@ -53,8 +57,7 @@ const galleryPopup = () => {
       type: "웹디자인",
       tool: "아이패드 프로크리에이트",
       memo: "보험의 반하다 웹사이트",
-      photo1: "./img/g3.jpg",
-      photo2: "./img/g4.jpg",
+      
     },
     {
       id: 2,
@@ -64,8 +67,7 @@ const galleryPopup = () => {
       type: "웹디자인",
       tool: "포토샵 피그마",
       memo: "의류쇼핑몰 웹디자인",
-      photo1: "./img/g4.jpg",
-      photo2: "./img/g5.jpg",
+      
     },
     {
       id: 3,
@@ -75,8 +77,7 @@ const galleryPopup = () => {
       type: "웹디자인",
       tool: "포토샵,피그마",
       memo: "시험기간에 넷플리스 보면서 공부 안하고 있는 츄덕이",
-      photo1: "./img/g5.jpg",
-      photo2: "./img/g6.jpg",
+     
     },
     {
       id: 4,
@@ -86,8 +87,7 @@ const galleryPopup = () => {
       type: "상세페이지",
       tool: "포토샵",
       memo: "무이밤 쇼핑몰 상세페이지",
-      photo1: "./img/g6.jpg",
-      photo2: "./img/g7.jpg",
+      
     },
     {
       id: 5,
@@ -97,8 +97,7 @@ const galleryPopup = () => {
       type: "이벤트 배너",
       tool: "포토샵, 일러스트",
       memo: "베베링크 sns 이벤트 배너제작.",
-      photo1: "./img/g7.jpg",
-      photo2: "./img/g8.jpg",
+      
     },
     {
       id: 6,
@@ -109,8 +108,7 @@ const galleryPopup = () => {
       type: "명함",
       tool: "포토샵",
       memo: "보험에 반하다 대표 명함제작",
-      photo1: "./img/g8.jpg",
-      photo2: "./img/g9.jpg",
+      
     },
     {
       id: 7,
@@ -121,8 +119,7 @@ const galleryPopup = () => {
       type: "명함",
       tool: "포토샵",
       memo: "보험에반하다 사원명함",
-      photo1: "./img/g9.jpg",
-      photo2: "./img/g10.jpg",
+      
     },
     {
       id: 8,
@@ -133,8 +130,7 @@ const galleryPopup = () => {
       type: "로고",
       tool: "포토샵, 일러스트",
       memo: "에떼르엘 로고 디자인",
-      photo1: "./img/g10.jpg",
-      photo2: "./img/g11.jpg",
+     
     },
     {
       id: 9,
@@ -145,8 +141,7 @@ const galleryPopup = () => {
       type: "디지털드로잉",
       tool: "아이패드 프로크리에이트",
       memo: "커피와 말을 가지고 만든 컵홀더 디자인",
-      photo1: "./img/g11.jpg",
-      photo2: "./img/g12.jpg",
+      
     },
     {
       id: 10,
@@ -157,8 +152,7 @@ const galleryPopup = () => {
       type: "일러스트",
       tool: "아이패드 프로크리에이트",
       memo: "커피와 말을 중심으로 그린 일러스트 포스터",
-      photo1: "./img/g12.jpg",
-      photo2: "./img/g13.jpg",
+      
     },
     {
       id: 11,
@@ -169,8 +163,7 @@ const galleryPopup = () => {
       type: "메뉴판디자인",
       tool: "포토샵, 일러스트",
       memo: "고소미 부엌 메뉴판 일러스트",
-      photo1: "./img/g13.jpg",
-      photo2: "./img/g14.jpg",
+       
     },
     {
       id: 12,
@@ -181,8 +174,7 @@ const galleryPopup = () => {
       type: "포스터",
       tool: "포토샵, 일러스트",
       memo: "논비건 포스터",
-      photo1: "./img/g14.jpg",
-      photo2: "./img/g15.jpg",
+     
     },
     {
       id: 13,
@@ -193,8 +185,7 @@ const galleryPopup = () => {
       type: "카드",
       tool: "포토샵, 일러스트",
       memo: "아이들 수업 놀이카드 제작",
-      photo1: "./img/g15.jpg",
-      photo2: "./img/g1.jpg",
+      
     },
     {
       id: 14,
@@ -204,9 +195,7 @@ const galleryPopup = () => {
       date: "2022.09.24",
       type: "디지털드로잉",
       tool: "포토샵, 일러스트",
-      memo: "꽃밭에 놀러간 커플 일러스트제작",
-      photo1: "./img/g15.jpg",
-      photo2: "./img/g2.jpg",
+      memo: "꽃밭에 놀러간 커플 일러스트제작", 
     },
   ];
 
@@ -220,29 +209,62 @@ const galleryPopup = () => {
   thumbnail.forEach((e, i) => {
     e.addEventListener("click", (event) => {
       event.preventDefault(0);
-      modalcontainer.style.left = 0;
-      closeBtn.style.display = "flex";
-      dim.style.display = "block";
-      containertitle.textContent = datas[i].title;
-      containerdate.textContent = datas[i].date;
-      meno.textContent = datas[i].memo;
-      work.setAttribute("src", datas[i].img);
+      openModal();
+      thumbsUpdate(i);
+      currentImg = i; 
+      dataUpdate(i);
 
-      photo0.setAttribute("src", datas[i].img);
-      photo1.setAttribute("src", datas[i].photo1);
-      photo2.setAttribute("src", datas[i].photo2);
-      datatitle.textContent = datas[i].title;
+      function openModal() {
+        modalcontainer.style.left = 0;
+        closeBtn.style.display = "flex";
+        dim.style.display = "block";
+      }
+
+      function dataUpdate(index) {
+        work.setAttribute("src", datas[index].img); 
+        containertitle.textContent = datas[index].title;
+        containerdate.textContent = datas[index].date;
+        meno.textContent = datas[index].memo; 
+        viewSite.setAttribute('href', datas[index].link)
+        
+      }  
+
+      function thumbsUpdate(index) {  
+        if( index === datas.length - 2) {
+          nextImg2 = 0;
+        } else if ( index === datas.length - 1) {
+          nextImg1 = 0;
+          nextImg2 = 1;
+        } else { 
+          nextImg1 = index  + 1;
+          nextImg2 = nextImg1 + 1;
+        } 
+        photo0.setAttribute("src", datas[i].img);
+        photo1.setAttribute("src", datas[nextImg1].img);
+        photo2.setAttribute("src", datas[nextImg2].img); 
+      } 
+
+      smallThumbs.forEach((e, idx) => {
+        e.addEventListener("click", ()=> {
+          if(idx === 0) {
+            dataUpdate(currentImg)
+          } else if(idx === 1) {
+            dataUpdate(nextImg1)
+          } else {
+            dataUpdate(nextImg2);
+          }
+        });
+      });
+
+
+
     });
   });
 
-  smallThumbs.forEach((e, idx) => {
-    e.addEventListener("click", () => {
-      const imgUrl = e.getAttribute("src");
-      work.setAttribute("src", imgUrl);
-      containertitle.innerHTML = e.dataset.title;
-      containerdate.innerHTML = e.dataset.created;
-    });
-  });
+   
+
+ 
+
 
   closeBtn.addEventListener("click", (e) => {
     modalcontainer.style.left = "-100%";

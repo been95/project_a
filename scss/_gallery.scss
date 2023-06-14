@@ -108,10 +108,19 @@
       font-size: 16px;
     }
     p {
-      padding-top: 50px;
+      padding-top: 20px;
       color: #fff;
       font-size: 14px;
       padding-bottom: 22px;
+    }
+    .link{
+      color: #fff;
+
+      .material-symbols-outlined {
+        font-size:14px;
+       
+      }
+
     }
   }
 
